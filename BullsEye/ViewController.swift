@@ -9,28 +9,43 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    @IBOutlet weak var valueSlider: UILabel!
-    @IBOutlet weak var horizontalSliderValue: UISlider!
-    var currentValue = 0
+    @IBOutlet weak var targetLabel: UILabel!
+    @IBOutlet weak var slider: UISlider!
+    var currentValue = 50
+    var targetValue = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        horizontalSliderValue.value = 50.0
-        // Do any additional setup after loading the view.
+        startNewRound()
     }
    
     
     @IBAction func showAlert() {
-        let message = "The value of the slider is now:\(currentValue)"
+        let difference = abs(targetValue - currentValue)
+        let points = 100 - difference
+        
+        let message = "You score \(points) points"
+        
         let alert = UIAlertController(title: "Hello, World", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Awesome", style: .default, handler: nil)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
+        startNewRound()
     }
     
     @IBAction func sliderMoved(_ slider: UISlider) {
         currentValue = lroundf(slider.value)
-        
-        valueSlider.text = "\(currentValue)"
+    }
+    
+    func startNewRound() {
+        targetValue = Int.random(in: 1...100)
+        updateLabels()
+        currentValue = 50
+        slider.value = Float(currentValue)
+    }
+    
+    func updateLabels() {
+        targetLabel.text = String(targetValue)
     }
 }
 
