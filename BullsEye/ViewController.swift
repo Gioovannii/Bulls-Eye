@@ -11,6 +11,7 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var valueSlider: UILabel!
     @IBOutlet weak var horizontalSliderValue: UISlider!
+    var currentValue = 0
     override func viewDidLoad() {
         super.viewDidLoad()
         horizontalSliderValue.value = 50.0
@@ -19,16 +20,15 @@ class ViewController: UIViewController {
    
     
     @IBAction func showAlert() {
-        let alert = UIAlertController(title: "Hello, World", message: "This is my first app", preferredStyle: .alert)
+        let message = "The value of the slider is now:\(currentValue)"
+        let alert = UIAlertController(title: "Hello, World", message: message, preferredStyle: .alert)
         let action = UIAlertAction(title: "Awesome", style: .default, handler: nil)
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
     }
+    
     @IBAction func sliderMoved(_ slider: UISlider) {
-        var currentValue = 0.0
-        currentValue = Double(slider.value.rounded())
-        
-        print("The value of the slider is now: \(currentValue)")
+        currentValue = lroundf(slider.value)
         
         valueSlider.text = "\(currentValue)"
     }
