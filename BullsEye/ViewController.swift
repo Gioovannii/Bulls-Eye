@@ -33,7 +33,7 @@ class ViewController: UIViewController {
         let difference = abs(targetValue - currentValue)
         var points = 100 - difference
         
-        score += points
+        
 
         let title: String
         
@@ -53,15 +53,18 @@ class ViewController: UIViewController {
             title = "Not even close..."
         }
         
+        score += points
         
         let message = "You scored \(points) points"
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let action = UIAlertAction(title: "OK", style: .default, handler: nil)
+        let action = UIAlertAction(title: "OK", style: .default) { _ in
+            self.startNewRound()
+        }
+        
         alert.addAction(action)
         present(alert, animated: true, completion: nil)
         
-        startNewRound()
     }
     
     @IBAction func sliderMoved(_ slider: UISlider) {
@@ -80,6 +83,16 @@ class ViewController: UIViewController {
         targetLabel.text = String(targetValue)
         scoreLabel.text = String(score)
         roundLabel.text = String(round)
+    }
+    
+    @IBAction func startOverButton(_ sender: Any) {
+        startNewGame()
+    }
+    
+    func startNewGame() {
+        score = 0
+        round = 0
+        startNewRound()
     }
 }
 
