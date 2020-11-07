@@ -20,12 +20,27 @@ class ViewController: UIViewController {
     @IBOutlet weak var slider: UISlider!
     @IBOutlet weak var scoreLabel: UILabel!
     @IBOutlet weak var roundLabel: UILabel!
-    
-    
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        startNewRound()
+        startNewGame()
+        
+        let thumbImageNormal = UIImage(named: "SliderThumb-Normal")!
+        slider.setThumbImage(thumbImageNormal, for: .normal)
+        
+        let thumbImageHighlighted = UIImage(named: "SliderThumb-Highlighted")!
+        slider.setThumbImage(thumbImageHighlighted, for: .highlighted)
+        
+        let insets = UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+        
+        let trackLeftImage = UIImage(named: "SliderTrackLeft")!
+        let trackLeftResizable = trackLeftImage.resizableImage(withCapInsets: insets)
+        slider.setMinimumTrackImage(trackLeftResizable, for: .normal)
+        
+        let trackRightImage = UIImage(named: "SliderTrackRight")!
+        let trackRightResizable = trackRightImage.resizableImage(withCapInsets: insets)
+        slider.setMaximumTrackImage(trackRightResizable, for: .normal)
+
     }
    
     
@@ -85,11 +100,7 @@ class ViewController: UIViewController {
         roundLabel.text = String(round)
     }
     
-    @IBAction func startOverButton(_ sender: Any) {
-        startNewGame()
-    }
-    
-    func startNewGame() {
+    @IBAction func startNewGame() {
         score = 0
         round = 0
         startNewRound()
