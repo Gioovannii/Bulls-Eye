@@ -35,18 +35,6 @@
                                     <action selector="close" destination="caF-cI-QPf" eventType="touchUpInside" id="bvs-Wb-XfQ"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HEW-53-7c1">
-                                <rect key="frame" x="79" y="40" width="738" height="261"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <string key="text">*** Bull’s Eye ***
-
-Welcome to the awesome game of Bull’s Eye where you can win points and fame by dragging a slider.
-
-Your goal is to place the slider as close as possible to the target value. The closer you are, the more points you score. Enjoy!</string>
-                                <color key="textColor" systemColor="labelColor"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="ml5-Yf-xbr"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -54,13 +42,9 @@ Your goal is to place the slider as close as possible to the target value. The c
                             <constraint firstAttribute="trailing" secondItem="m1Q-jw-cDb" secondAttribute="trailing" id="C8W-Ux-H1g"/>
                             <constraint firstItem="m1Q-jw-cDb" firstAttribute="top" secondItem="ml5-Yf-xbr" secondAttribute="top" id="Cwn-fD-a6v"/>
                             <constraint firstItem="ml5-Yf-xbr" firstAttribute="bottom" secondItem="SPQ-HK-Hdf" secondAttribute="bottom" constant="20" id="OM3-Rs-Q4U"/>
-                            <constraint firstItem="HEW-53-7c1" firstAttribute="leading" secondItem="ml5-Yf-xbr" secondAttribute="leading" constant="35" id="Q2P-S9-nlI"/>
                             <constraint firstItem="SPQ-HK-Hdf" firstAttribute="centerX" secondItem="DiH-hg-z07" secondAttribute="centerX" id="YSu-MR-TsO"/>
-                            <constraint firstItem="SPQ-HK-Hdf" firstAttribute="top" secondItem="HEW-53-7c1" secondAttribute="bottom" constant="35" id="ZMX-EW-hTu"/>
                             <constraint firstAttribute="bottom" secondItem="m1Q-jw-cDb" secondAttribute="bottom" id="lmE-Yk-7Se"/>
-                            <constraint firstItem="HEW-53-7c1" firstAttribute="top" secondItem="ml5-Yf-xbr" secondAttribute="top" constant="40" id="p5q-ir-Nt2"/>
                             <constraint firstItem="m1Q-jw-cDb" firstAttribute="leading" secondItem="DiH-hg-z07" secondAttribute="leading" id="tGD-br-4zz"/>
-                            <constraint firstItem="ml5-Yf-xbr" firstAttribute="trailing" secondItem="HEW-53-7c1" secondAttribute="trailing" constant="35" id="y42-q3-ibA"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -229,9 +213,6 @@ Your goal is to place the slider as close as possible to the target value. The c
         <image name="InfoButton" width="10" height="22"/>
         <image name="SmallButton" width="32" height="32"/>
         <image name="StartOverIcon" width="20" height="20"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
