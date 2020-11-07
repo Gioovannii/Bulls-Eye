@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7B44C71925564F850058824D /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B44C71825564F850058824D /* AboutViewController.swift */; };
+		7B44C720255658DA0058824D /* BullsEye.html in Resources */ = {isa = PBXBuildFile; fileRef = 7B44C71F255658DA0058824D /* BullsEye.html */; };
 		7B48A69425529842009061E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B48A69325529842009061E3 /* AppDelegate.swift */; };
 		7B48A69625529842009061E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B48A69525529842009061E3 /* SceneDelegate.swift */; };
 		7B48A69825529842009061E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B48A69725529842009061E3 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 
 /* Begin PBXFileReference section */
 		7B44C71825564F850058824D /* AboutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		7B44C71F255658DA0058824D /* BullsEye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = BullsEye.html; sourceTree = "<group>"; };
 		7B48A69025529842009061E3 /* BullsEye.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BullsEye.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B48A69325529842009061E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B48A69525529842009061E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -42,6 +44,7 @@
 		7B48A68725529842009061E3 = {
 			isa = PBXGroup;
 			children = (
+				7B44C71F255658DA0058824D /* BullsEye.html */,
 				7B48A69225529842009061E3 /* BullsEye */,
 				7B48A69125529842009061E3 /* Products */,
 			);
@@ -128,6 +131,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B48A6A025529842009061E3 /* LaunchScreen.storyboard in Resources */,
+				7B44C720255658DA0058824D /* BullsEye.html in Resources */,
 				7B48A69D25529842009061E3 /* Assets.xcassets in Resources */,
 				7B48A69B25529842009061E3 /* Main.storyboard in Resources */,
 			);
